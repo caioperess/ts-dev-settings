@@ -2,40 +2,35 @@
   "env": {
     "es2021": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
+  "extends": ["plugin:react/recommended", "airbnb"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
   "rules": {
+    "semi": "off",
+    "linebreak-style": "off",
+    "prettier/prettier": "error",
     "no-shadow": "off",
     "no-empty": "warn",
     "eqeqeq": "warn",
     "camelcase": "off",
     "no-alert": "off",
     "react/require-default-props": "off",
-    "prettier/prettier": "error",
     "react/jsx-curly-newline": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react/style-prop-object": "off",
     "no-unused-expressions": "off",
     "no-use-before-define": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
@@ -60,6 +55,9 @@
   "settings": {
     "import/resolver": {
       "typescript": {}
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     }
   }
 }

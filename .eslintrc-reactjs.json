@@ -23,6 +23,41 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "semi": "off",
+    "linebreak-style": "off",
+    "prettier/prettier": "error",
+    "no-shadow": "off",
+    "no-empty": "warn",
+    "eqeqeq": "warn",
+    "camelcase": "off",
+    "no-alert": "off",
+    "react/require-default-props": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/style-prop-object": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "import/prefer-default-export": "off",
+    "no-plusplus": "off",
+    "no-console": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
     "prettier/prettier": "error",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
@@ -50,6 +85,9 @@
   "settings": {
     "import/resolver": {
       "typescript": {}
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     }
   }
 }
